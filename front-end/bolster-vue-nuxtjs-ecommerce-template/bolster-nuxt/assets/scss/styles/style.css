@@ -8717,15 +8717,21 @@ Compare Area CSS
 Login Area CSS
 =================================================*/
 .login-area .section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   margin-bottom: 25px;
 }
 
 .login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   padding-right: 15px;
 }
 
 .login-form .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .login-form .form-group label {

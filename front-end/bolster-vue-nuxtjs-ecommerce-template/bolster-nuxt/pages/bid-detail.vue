@@ -105,7 +105,7 @@
                 원영이 팬싸인회에서 추첨받은 포토카드입니다. 
             </div>
         </div>
-    
+
         <div class="detail-image-description">
             <div>
                 <div class="big-detail-image-list">
@@ -198,6 +198,7 @@ export default {
 .product-main-image{
     width: 500px;
     height: 500px;
+
     background-color:lightgrey;
     margin-bottom: 10px;
 }
@@ -229,6 +230,7 @@ export default {
     text-align:center;
     align-items: center;
     align-content: center;
+
     width: 80%;
 }
 
@@ -332,5 +334,6 @@ export default {
 .container{
     width: 80%;
 } */
+
 
 </style>

@@ -6,7 +6,7 @@
                     <Sidebar/>
                 </div>
                 <div class="cart-items">
-                    <PurchaseList />
+                    <BidList />
                 </div>
             </div>
         </div>
@@ -14,12 +14,12 @@
 </template>
 <script>
     import Sidebar from '../components/all-products/Sidebar'
-    import PurchaseList from '../components/cart/PurchaseList'
+    import BidList from '../components/cart/BidList'
 
     export default {
         components: {
             Sidebar,
-            PurchaseList
+            BidList
         }
     }
 </script>

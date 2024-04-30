@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Menubar />
     <Nuxt />
     <Footer></Footer>
     <SiteLoader v-if="loading" />
@@ -9,13 +9,13 @@
 </template>
 
 <script>
-import Header from './Header'
+import Menubar from './Menubar'
 import Footer from './Footer'
 import BackToTop from './BackToTop'
 import SiteLoader from './SiteLoder'
 export default {
   components: {
-    Header,
+    Menubar,
     Footer,
     BackToTop,
     SiteLoader,
