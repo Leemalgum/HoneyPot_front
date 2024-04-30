@@ -1,54 +1,59 @@
 <template>
-    <div>
-        <Menubar />
+    <div class="container">
         <div class="bid-details-content">
             <!-- 상품 메인 이미지 및 상세 이미지 -->
+            
             <div class="product-layout">
-                <div class="main-image-layout">
-                    <div class="product-main-image">
+                
+                        <div class="product-main-image">
+                        </div>
+                    <div class="product-detail-image-list">
+                        <div v-for="(index) in 4" :key="index" class="product-detail-image">
+                        </div>
                     </div>
-                </div>
-                <div class="product-detail-image-list">
-                    <div v-for="(index) in 4" :key="index" class="product-detail-image">
-                    </div>
-                </div>
             </div>      
             
 
-        <!-- 상품 상세 설명 -->
-        <div class ="product-details">
-            <div class="timer">
+            <!-- 상품 상세 설명 -->
+            <div class ="product-details">
+                <div class="timer">
                     <b>5 Days 12:00:51</b>
-            </div>
+                </div>
              <!-- 타이머 기능 추후 구현 -->
-            <div class="description">
-                <div class ="product-name">
-                            <h1><b>장원영 포토카드</b></h1>
-            </div>
-            <hr>
-                <table>
-                    <tr>
-                        <td><b>판매자</b></td>
-                        <td style="padding-left: 300px;">최소원</td>
-                        <!-- {{seller_id}} -->
-                    </tr>
-                    <tr>
-                    <td><b>시작가</b></td>
-                    <td style="padding-left: 300px;">25000원</td>
+               
+             <div class="description">
+                    <div class ="product-name">
+                            <b>장원영 포토카드</b>
+                    </div>
+                    <hr>
+
+                    <div class="seller">
+
+                    </div>
+
+                    <table>
+
+                        <tr>
+                            <td><b>판매자</b></td>
+                            <td style="padding-left: 300px;">최소원</td>
+                            <!-- {{seller_id}} -->
+                        </tr>
+                        <tr>
+                        <td><b>시작가</b></td>
+                        <td style="padding-left: 300px;">25000원</td>
                     <!-- {{start_price}}원 -->
                     
-                    </tr>
-                       <td><b>현재가</b></td>
-                       <td style="padding-left: 300px;">40000원</td>
-                        <!-- {{price}}원 -->
-                    
-                   <tr>
-                        <td><b>즉시 판매가</b></td>
-                        <td style="padding-left: 300px;">50000원</td>
-                        <!-- {{buy_now}}원 -->
-                    </tr>
+                        </tr>
+                        <td><b>현재가</b></td>
+                        <td style="padding-left: 300px;">40000원</td>
+                            <!-- {{price}}원 -->
+                        
+                        <tr>
+                            <td><b>즉시 판매가</b></td>
+                            <td style="padding-left: 300px;">50000원</td>
+                            <!-- {{buy_now}}원 -->
+                        </tr>
                     </table>
-                
                 </div>
     
 
@@ -89,6 +94,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -163,11 +169,9 @@ export default {
 <style scoped>
 
 .bid-details-content {
-    display: flex;
-    margin-top: 50px;
     justify-content: center;
-    margin-left: 80px;
-    margin-right: 80px;
+    align-items: center;
+    display: flex;
 }
 
 .product-layout{
@@ -176,8 +180,14 @@ export default {
     margin-right: 50px;
 }
 
+
 .product-name {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+
+.tr{
+    font-size: 30px;
 }
 
 .main-image-layout {
@@ -186,8 +196,8 @@ export default {
 }
 
 .product-main-image{
-    width: 700px;
-    height: 700px;
+    width: 500px;
+    height: 500px;
     background-color:lightgrey;
     margin-bottom: 10px;
 }
@@ -195,12 +205,12 @@ export default {
 .product-detail-image-list{
     display:flex;
     flex-direction: column;
-    margin-right: 20px;
+    margin-right: 50px;
 }
 
 .product-detail-image{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color:lightgrey;
     margin-bottom: 20px;
     margin-left: 20px;
@@ -208,8 +218,10 @@ export default {
 }
 
 .timer {
-    font-size: 80px;
-    margin-bottom:100px;
+    font-size: 50px;
+    margin-bottom:20px;
+    margin-top: 80px;
+    text-align: right;
 }
 
 .product-details {
@@ -217,17 +229,16 @@ export default {
     text-align:center;
     align-items: center;
     align-content: center;
+    width: 80%;
 }
 
 .description{
     text-align: left;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
-.td {
-    padding-right:200px;
-}
+
 
 .caution{
     margin-top:30px;
@@ -317,5 +328,9 @@ export default {
     border: 1px solid #ddd;
     color: black;
 }
+/* 
+.container{
+    width: 80%;
+} */
 
 </style>
