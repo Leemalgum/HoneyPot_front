@@ -4,9 +4,6 @@
         <div class="bid-details-content">
             <!-- 상품 메인 이미지 및 상세 이미지 -->
             <div class="product-layout">
-                <div class ="product-name">
-                    <h2><b>장원영 포토카드</b></h2>
-                </div>
                 <div class="main-image-layout">
                     <div class="product-main-image">
                     </div>
@@ -15,7 +12,8 @@
                     <div v-for="(index) in 4" :key="index" class="product-detail-image">
                     </div>
                 </div>
-            </div>       
+            </div>      
+            
 
         <!-- 상품 상세 설명 -->
         <div class ="product-details">
@@ -24,6 +22,10 @@
             </div>
              <!-- 타이머 기능 추후 구현 -->
             <div class="description">
+                <div class ="product-name">
+                            <h1><b>장원영 포토카드</b></h1>
+            </div>
+            <hr>
                 <table>
                     <tr>
                         <td><b>판매자</b></td>
@@ -97,8 +99,7 @@
                 원영이 팬싸인회에서 추첨받은 포토카드입니다. 
             </div>
         </div>
-
-       
+    
         <div class="detail-image-description">
             <div>
                 <div class="big-detail-image-list">
@@ -108,7 +109,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -164,21 +164,20 @@ export default {
 
 .bid-details-content {
     display: flex;
+    margin-top: 50px;
     justify-content: center;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 .product-layout{
+    display: flex;
     justify-content: center;
-    text-align:center;
-    align-items: center;
-    align-content: center;
-    margin-right:150px;
-   
+    margin-right: 50px;
 }
 
 .product-name {
-    margin-top : 50px;
-    margin-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 .main-image-layout {
@@ -187,26 +186,26 @@ export default {
 }
 
 .product-main-image{
-    width: 600px;
-    height: 600px;
+    width: 700px;
+    height: 700px;
     background-color:lightgrey;
     margin-bottom: 10px;
 }
 
 .product-detail-image-list{
     display:flex;
-    justify-content : center;
+    flex-direction: column;
+    margin-right: 20px;
 }
 
 .product-detail-image{
     width: 100px;
     height: 100px;
     background-color:lightgrey;
-    margin: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
     justify-content : center;
 }
-
-
 
 .timer {
     font-size: 80px;
@@ -221,7 +220,7 @@ export default {
 }
 
 .description{
-    align-content: center;
+    text-align: left;
     line-height: 50px;
     font-size: 20px;
 }
