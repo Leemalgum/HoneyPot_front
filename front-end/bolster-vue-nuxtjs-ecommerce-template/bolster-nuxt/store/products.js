@@ -1,19 +1,29 @@
 const state = () => ({
     all: [
-        {
-            id: 1,
-            name: 'Linen crochet trim t-shirt',
-            price: 191.00,
-            offer: true,
-            offerPrice: 3,
-            latest: true,
-            bestSellers: false,
-            trending: false,
-            image: require('../assets/img/img1.jpg'),
-            imageHover: require('../assets/img/img-hover1.jpg'),
-            timePeriod: false,
-            dateTime: new Date("December 19, 2020 17:00:00 PDT")
-        },
+        {id: 1,
+            sellerId: 'army82801',
+            name: 'BTS JIN PHOTOCARD',
+            details: 'PERMISSION TO DANCE ON STAGE  미니포카',
+            price: '27,000',
+            quantity: 2,
+            image: require('../assets/img/jin.jpg'),
+            progressStatus: '결제완료',
+            deliveryStatus: '배송준비중',
+            purchaseDate: '2024.04.28'},
+        // {
+        //     id: 1,
+        //     name: 'Linen crochet trim t-shirt',
+        //     price: 191.00,
+        //     offer: true,
+        //     offerPrice: 3,
+        //     latest: true,
+        //     bestSellers: false,
+        //     trending: false,
+        //     image: require('../assets/img/img1.jpg'),
+        //     imageHover: require('../assets/img/img-hover1.jpg'),
+        //     timePeriod: false,
+        //     dateTime: new Date("December 19, 2020 17:00:00 PDT")
+        // },
         {
             id: 2,
             name: 'Neck empire sleeve t-shirts',
