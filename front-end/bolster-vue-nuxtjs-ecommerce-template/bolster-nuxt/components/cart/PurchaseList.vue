@@ -85,7 +85,6 @@ export default {
             ]
         }
     },
-    // props : ['product']
 }
 </script>
 <style scoped="scoped">
