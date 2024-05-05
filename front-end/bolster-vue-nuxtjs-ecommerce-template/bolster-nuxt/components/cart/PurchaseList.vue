@@ -13,38 +13,38 @@
                         </tr>
                     </thead>
 
-                    <tbody v-if="cart.length > 0">
-                        <tr v-for="(cart, i) in cart" :key="i" style="text-align: center;">
+                    <tbody v-if="product.length > 0">
+                        <tr v-for="(product, i) in product" :key="i" style="text-align: center;">
                             <td class="product-information" style="text-align: left;">
-                                <nuxt-link :to="'/product-detail/' + cart.id" class="product-detail">
+                                <nuxt-link :to="'/bid-details/' + product.id" class="product-detail">
                                     <div style="display: flex;">
                                         <div style="margin-right: 10px;">
-                                            <img :src="cart.image" width="60px" />
+                                            <img :src="product.image" width="60px" />
                                         </div>
                                         <div>
                                             <h6>
-                                                {{ cart.name }}
+                                                {{ product.name }}
                                             </h6>
-                                            {{ cart.sellerId }}
+                                            {{ product.sellerId }}
                                             <br>
-                                            {{ cart.details }}
+                                            {{ product.details }}
                                             <br>
-                                            {{ cart.price }}
+                                            {{ product.price }}
                                         </div>
                                     </div>
                                 </nuxt-link>
                             </td>
 
                             <td class="progress-status">
-                                {{ cart.progressStatus }}
+                                {{ product.progressStatus }}
                             </td>
 
                             <td class="delivery-status">
-                                {{ cart.deliveryStatus }}
+                                {{ product.deliveryStatus }}
                             </td>
 
                             <td class="purchase-date">
-                                {{ cart.purchaseDate }}
+                                {{ product.purchaseDate }}
                             </td>
                         </tr>
                     </tbody>
@@ -59,8 +59,9 @@ export default {
     data() {
         return {
             // 테스트용 데이터로 초기화된 cart 배열
-            cart: [
+            product: [
                 {
+                    id: 1,
                     sellerId: 'army82801',
                     name: 'BTS JIN PHOTOCARD',
                     details: 'PERMISSION TO DANCE ON STAGE  미니포카',
@@ -83,7 +84,8 @@ export default {
                 }
             ]
         }
-    }
+    },
+    // props : ['product']
 }
 </script>
 <style scoped="scoped">
