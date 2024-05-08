@@ -1,24 +1,23 @@
 <template>
   <div>
     <!-- Start All Products Area -->
-    <div class="all-products-area pb-60">
-      <div class="container">
+    <div class="container">
         <div class="section-title">
-          <h2><span class="dot"></span> Latest Products</h2>
+          <h2>최근 등록 상품</h2>
         </div>
 
         <div class="row">
-          <ProductItem
-            v-for="(product, index) in products"
-            :product="product"
-            :key="index"
-            @clicked="toggle"
-            :className="`col-lg-3 col-md-6 col-sm-6`"
-          ></ProductItem>
+            <ProductItem
+              v-for="(product, index) in products.slice(0, 4)"
+              :product="product"
+              :key="index"
+            ></ProductItem>
+            <div class="btn-more-layout">
+              <nuxt-link to="/products" class="btn-more-products">더보기</nuxt-link>  
+                    <!-- 경매 상품 리스트 페이지로 이동해서 최근순으로 목록 보여줌  -->
+            </div>
+          </div> 
         </div>
-      </div>
-    </div>
-    <!-- End all Products Area -->
     <QuckView />
   </div>
 </template>
@@ -26,7 +25,7 @@
 <script>
 import QuckView from '../modals/QuckView'
 import { mutations } from '../../utils/sidebar-util'
-import ProductItem from './ProductItem'
+import ProductItem from './ProductItemMain'
 
 export default {
   components: {
@@ -34,16 +33,23 @@ export default {
     ProductItem,
   },
   methods: {
-    toggle() {
-      mutations.toggleQuickView()
-    },
   },
   computed: {
     products() {
       return this.$store.state.products.all.filter(
-        (product) => product.latest === true
-      )
+          (product) => product.bestSellers === true
+        )
     },
   },
 }
 </script>
+<style scoped>
+   .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+  }
+
+</style>

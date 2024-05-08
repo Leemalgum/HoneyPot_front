@@ -124,17 +124,18 @@ img {
 .section-title {
   margin-bottom: 40px;
   text-align: center;
-  background-color: #f8f8f8;
+  /* background-color: #f8f8f8; */
   padding: 15px;
+  /* width:90%; */
 }
 
 .section-title h2 {
   margin-bottom: 0;
   display: inline-block;
   position: relative;
-  padding-left: 20px;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 400;
+  text-align:center;
 }
 
 .section-title h2 .dot {
@@ -173,6 +174,22 @@ img {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
+}
+.btn-more-layout {
+  display: flex; 
+  justify-content: center; 
+}
+.btn-more-products {
+  display: flex; 
+  justify-content: center; 
+  background-color:#ffb400;
+  border:#ffb400 solid 1px;
+  color:white;
+  align-items: center;
+  border-radius: 10px;
+  font-style: bold;
+  height: 30px;
+  width: 200px;
 }
 
 .btn.disabled, .btn:disabled {
@@ -1910,6 +1927,7 @@ Main Banner Area CSS
 
 .main-banner-content {
   max-width: 520px;
+
 }
 
 .main-banner-content span {
@@ -2729,6 +2747,9 @@ All Products Area CSS
   margin-bottom: 30px;
   position: relative;
   text-align: center;
+  width:0%;
+  display: flex;
+  align-items: center;
 }
 
 .single-product-box .product-image {
@@ -2813,7 +2834,7 @@ All Products Area CSS
 .single-product-box .product-image .timer div {
   display: inline-block;
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 8px 15px;
+  /* padding: 8px 15px; */
   color: #222222;
   border-radius: 5px;
   font-size: 18px;
@@ -4172,6 +4193,8 @@ Best Sellers Area CSS
 =================================================*/
 .best-sellers-area {
   padding-bottom: 30px;
+  display: flex;
+    justify-content: center;
 }
 
 .best-sellers-products-slides.owl-theme .VueCarousel-navigation {
