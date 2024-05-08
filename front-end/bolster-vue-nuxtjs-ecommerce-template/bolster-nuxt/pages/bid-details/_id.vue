@@ -2,6 +2,7 @@
     <div class="container">
         <div class="bid-details-content">
             <!-- 상품 메인 이미지 및 상세 이미지 -->
+
             <div class="product-layout">
                     <div class="product-main-image">
                         <img class="main-image" :src="product.image" alt="Product Image">
@@ -29,6 +30,7 @@
                         <tr>
                             <td><b>판매자</b></td>
                             <td style="padding-left: 300px;">{{product.Id}}</td>
+
                             <!-- {{seller_id}} -->
                         </tr>
                         <tr>
@@ -77,6 +79,7 @@
                     <div class="wishlist-btn">
                         <a href="#" class="btn-wish">
                             <i class="far fa-heart" style="color:red; text-align:center">
+
                             </i>
                         </a>
                         <div style="text-align: right; vertical-align:bottom; margin-top:20px;">
@@ -89,6 +92,7 @@
                 </div>
 
  
+
 
         <div class="text-description">
             <b><h2>제품설명</h2></b>
@@ -224,7 +228,6 @@ export default {
 
 .tr{
     font-size: 30px;
-
 }
 
 .main-image-layout {
@@ -301,6 +304,7 @@ export default {
     justify-content: space-around;
     margin-top:50px;
     width:100%;
+
 }
 
 .btn-wish {
@@ -414,4 +418,5 @@ export default {
 .wishlist-btn {
     text-align:center;
 }
+
 </style>

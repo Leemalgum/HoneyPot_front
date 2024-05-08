@@ -336,4 +336,11 @@ export default {
 } */
 
 
+/* 
+.container{
+    width: 80%;
+} */
+
+
+
 </style>

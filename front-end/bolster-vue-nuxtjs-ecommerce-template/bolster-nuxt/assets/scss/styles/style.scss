@@ -127,17 +127,17 @@ img {
 .section-title {
     margin-bottom: 40px;
     text-align: center;
-    background-color: #f8f8f8;
+    // background-color: #f8f8f8;
     padding: 15px;
+    // width:90%;
 
     h2 {
         margin-bottom: 0;
         display: inline-block;
         position: relative;
-        padding-left: 20px;
         font: {
             size: 20px;
-            weight: 600;
+            weight: 400;
         }
         .dot {
             position: absolute;
@@ -2652,6 +2652,7 @@ All Products Area CSS
     margin-bottom: 30px;
     position: relative;
     text-align: center;
+    align-items: center;
 
     .product-image {
         position: relative;
@@ -3181,7 +3182,7 @@ All Products Area CSS
             margin-bottom: 0;
             display: inline-block;
             position: relative;
-            padding-left: 20px;
+            text-align: center;
             font: {
                 size: 18px;
                 weight: 600;
@@ -8636,7 +8637,7 @@ Login Area CSS
     padding-right: 15px;
 
     .form-group {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         label {
             display: block;
@@ -9118,3 +9119,21 @@ Go Top CSS
 .vueperslides__parallax-wrapper{
     padding-bottom: 100% !important;
 }
+
+.btn-more-layout {
+    display: flex; 
+    justify-content: center; 
+  }
+.btn-more-products {
+    display: flex; 
+    justify-content: center; 
+    background-color:#ffb400;
+    border:#ffb400 solid 1px;
+    color:white;
+    align-items: center;
+    border-radius: 10px;
+    font-style: bold;
+    height: 30px;
+    width: 200px;
+  }
+
