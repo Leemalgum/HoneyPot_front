@@ -31,3 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
+front-end/bolster-vue-nuxtjs-ecommerce-template/package-lock.json
+front-end/bolster-vue-nuxtjs-ecommerce-template/bolster-nuxt/package-lock.json

@@ -1,24 +1,4 @@
 <template>
-    <!-- <div>
-        <Menubar/>
-        <div class="products-collections-area ptb-60">
-            <div class="container">
-                <div class="row">
-                    <Sidebar/>
-                </div>
-                <CartItems />
-            </div>
-        </div>
-        <div class="content">
-                <div class="sidebar">
-                    <Sidebar/>
-                </div>
-                <div class="cart-items">
-                    <CartItems />
-                </div>
-            </div>
-        
-    </div> -->
      <div class="container">
         <div class="wrapper">
             <div class="content">
@@ -26,7 +6,7 @@
                     <Sidebar/>
                 </div>
                 <div class="cart-items">
-                    <CartItems />
+                    <PurchaseList />
                 </div>
             </div>
         </div>
@@ -34,12 +14,12 @@
 </template>
 <script>
     import Sidebar from '../components/all-products/Sidebar'
-    import CartItems from '../components/cart/CartItems'
+    import PurchaseList from '../components/cart/PurchaseList'
 
     export default {
         components: {
             Sidebar,
-            CartItems
+            PurchaseList
         }
     }
 </script>

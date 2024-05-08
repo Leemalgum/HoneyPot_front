@@ -55,6 +55,7 @@ export default {
         { src: '~/plugins/vue-backtotop', ssr: false },
         { src: '~/plugins/vue-toastification', ssr: false },
         { src: '~/plugins/vueperslides', ssr: false },
+        { src: '~/plugins/TinyMCE.js', mode: 'client' }
         // { src: '~/plugins/firebase' },
     ],
     /*
@@ -103,7 +104,41 @@ export default {
         /*
         ** You can extend webpack config here
         */
-        extend (config, ctx) {
-        }
+        extend (config, { isDev, isClient }) {
+            // 웹팩 구성 요소를 여기에 추가
+            if (isClient) {
+                config.module.rules.push({
+                    test: /\.js$/,
+                    loader: 'babel-loader',
+                    exclude: /node_modules\/(?!(chart.js)\/).*/,
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                });
+            }
+        },
+
+        transpile: ['vue-chartjs'],
+
+        babel: {
+            presets({ isServer }) {
+                return [
+                    [
+                        require.resolve('@nuxt/babel-preset-app'),
+                        {
+                            buildTarget: isServer ? 'server' : 'client',
+                            useBuiltIns: 'usage',
+                            corejs: { version: 3 }
+                        } // 옵션은 객체여야 함
+                    ]
+                ]
+            },
+            compact: false,
+            plugins: [
+                ['@babel/plugin-proposal-class-properties', { loose: true }],
+                ['@babel/plugin-proposal-private-methods', { loose: true }],
+                ['@babel/plugin-proposal-private-property-in-object', { loose: true }],
+            ]
+        },
     }
 }
