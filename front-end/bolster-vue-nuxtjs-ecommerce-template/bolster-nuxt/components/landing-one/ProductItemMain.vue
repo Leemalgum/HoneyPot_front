@@ -2,8 +2,8 @@
     <div :class="className">
         <div class="single-product-box" >
             <div class="product-image">
-                <nuxt-link :to="`/products-details/${product.id}`">
-                    <!-- <nuxt-link :to="`/products-details/${product.productId}`">-->
+                <nuxt-link :to="`/bid-details/1`">
+                    <!-- <nuxt-link :to="`/bid-details/${product.productId}`">-->
                     <img :src="product.image" :alt="product.name"/>
                     <!-- <img :src="product.imageHover" :alt="product.name" /> -->
                 </nuxt-link>
@@ -124,10 +124,14 @@ export default {
         text-align: center;
     }
 
-
-
     .product-content{
         text-align:left;
         width:100%;
     }
+
+    .product-image img{
+        width: 100%;
+        height: 300px;
+    }
+
 </style>

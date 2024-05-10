@@ -67,8 +67,6 @@ export default {
             ]
         }
     }
-
-
 }
 </script>
 <style scoped>
@@ -78,9 +76,11 @@ export default {
 }
 .home-slides {
     width: 100%;
-    height: 80%;
 }
 
+.main-banner {
+    height: 500px;
+}
 
 
 </style>
